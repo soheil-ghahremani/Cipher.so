@@ -1,4 +1,2 @@
 before_install:
    - yes | sdkmanager "cmake;3.18.1"
-install:
-   - ./gradlew publish -PmavPublishToMavenLocal=true
