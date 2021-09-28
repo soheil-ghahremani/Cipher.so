@@ -56,7 +56,7 @@ task zipNativeArchive(type: Zip) {
 
 }
 
-tasks['jar'].finalizedBy zipNativeArchive
+//tasks['jar'].finalizedBy zipNativeArchive
 
 
 
