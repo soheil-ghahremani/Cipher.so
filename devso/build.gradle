@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
@@ -6,7 +6,6 @@ android {
 
 
     defaultConfig {
-        applicationId "net.idik.lib.cipher.so.devso"
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
