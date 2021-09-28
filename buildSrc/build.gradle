@@ -65,19 +65,32 @@ properties.load(project.file('../local.properties').newDataInputStream())
 
 
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = project.group
-            artifactId = archivesBaseName
-            version = project.version
-            url = uri('../repo')
-            desc = 'A sample way to store secure message in .so librarly'
-            website = 'https://github.com/MEiDIK/Cipher.so'
-            repoName = 'Cipher.so'
-            bintrayUser = properties.getProperty("bintray.user")
-            bintrayKey = properties.getProperty("bintray.apikey")
-            dryRun = false
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // Applies the component for the release build variant.
+                from components.release
+
+                // You can then customize attributes of the publication as shown below.
+                groupId = project.group
+                artifactId = archivesBaseName
+                version = project.version
+
+            }
+            // Creates a Maven publication called “debug”.
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+
+                groupId = project.group
+                artifactId = archivesBaseName
+                version = project.version
+            }
         }
     }
-}
+
+
+
