@@ -41,7 +41,7 @@ task zipNativeArchive(type: Zip) {
     from "${project.rootProject.file("devso").canonicalPath}"
     include "src/main/**"
     include "CMakeLists.txt"
-    exclude "src/main/cpp/include/extern-keys.h"
+//    exclude "src/main/cpp/include/extern-keys.h"
     exclude "src/main/java/net/idik/lib/cipher/so/devso/**"
     exclude "src/main/jni"
     exclude "src/main/res/**"
