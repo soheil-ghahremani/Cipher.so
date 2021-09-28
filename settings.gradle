@@ -1,1 +1,1 @@
-include ':sample', ':buildSrc', ':devso', ':sample2'
+include ':sample', ':devso', ':sample2'
