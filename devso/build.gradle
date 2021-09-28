@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.dcendents:android-maven'
+apply plugin: 'com.github.dcendents:android-maven-gradle-plugin'
 
 android {
     compileSdkVersion 26
